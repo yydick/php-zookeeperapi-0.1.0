@@ -1,0 +1,19 @@
+{
+    "name": "yydick/php-zookeeperapi-0.1.0",
+    "description": "zookeeper-php-api",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "yydick",
+            "email": "yydick@sohu.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SPOOL\\ZOOKEEPER\\": "src"
+        }
+    }
+}

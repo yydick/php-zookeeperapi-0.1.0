@@ -1,7 +1,6 @@
 <?php
-namespace Zkclient;
 
-use Zkclient\Lib\Log;
+use Spool\Zookeeper\Lib\Log;
 
 defined('LOGFILE') || define('LOGFILE', 'php://stderr');
 define('LOGSTREAM', Log::getLogStream());
@@ -207,20 +206,20 @@ define('SYNCHRONOUS_MARKER', null); /*尝试将同步标志设置为null*/
 
 define('WSAEWOULDBLOCK', ENOBUFS);
 define('WSAEINPROGRESS', 10036);
-define('EWOULDBLOCK', WSAEWOULDBLOCK);
+define('EWOULDBLOCK',    WSAEWOULDBLOCK);
 //define('EINPROGRESS', WSAEINPROGRESS);
 
-define('POLLIN', 0x0001);
-define('POLLPRI', 0x0002);
-define('POLLOUT', 0x0004);
-define('POLLERR', 0x0008);
-define('POLLHUP', 0x0010);
+define('POLLIN',   0x0001);
+define('POLLPRI',  0x0002);
+define('POLLOUT',  0x0004);
+define('POLLERR',  0x0008);
+define('POLLHUP',  0x0010);
 define('POLLNVAL', 0x0020);
 
 define('POLLRDNORM', 0x0040);
 define('POLLRDBAND', 0x0080);
 define('POLLWRNORM', 0x0100);
 define('POLLWRBAND', 0x0200);
-define('POLLMSG', 0x0400);
+define('POLLMSG',    0x0400);
 define('POLLREMOVE', 0x1000);
-define('POLLRDHUP', 0x2000);
+define('POLLRDHUP',  0x2000);

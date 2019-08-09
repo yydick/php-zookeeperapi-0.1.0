@@ -1,9 +1,18 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-require 'vendor/autoload.php';
 
+namespace Spool\Zookeeper;
+require 'src/Base.php';
+/**
+ * Zookeeper client for php
+ *
+ * @author 大天使长
+ */
+class Zookeeper {
+    //put your code here
+}

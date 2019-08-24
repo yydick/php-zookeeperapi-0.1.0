@@ -6,12 +6,12 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Generated;
+namespace Spool\Zookeeper\Generated;
 
 
-use Zkclient\Classes\Oarchive;
-use Zkclient\Classes\Iarchive;
-use Zkclient\Classes\Buffer;
+use Spool\Zookeeper\Classes\Oarchive;
+use Spool\Zookeeper\Classes\Iarchive;
+use Spool\Zookeeper\Classes\Buffer;
 
 /**
  * Description of GetSASLRequest
@@ -20,7 +20,7 @@ use Zkclient\Classes\Buffer;
  */
 class GetSASLRequest {
     /**
-    * @var \Zkclient\Classes\Buffer
+    * @var \Spool\Zookeeper\Classes\Buffer
     */
     public $token;	      //buffer
 

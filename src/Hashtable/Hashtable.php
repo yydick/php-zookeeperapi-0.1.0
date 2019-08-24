@@ -1,10 +1,10 @@
 <?php
 
-namespace Zkclient\Hashtable;
+namespace Spool\Zookeeper\Hashtable;
 
-use Zkclient\Adaptor\ZhandleT;
-use Zkclient\Hashtable\WatcherObjectList;
-use Zkclient\Hashtable\WatcherObjectT;
+use Spool\Zookeeper\Adaptor\ZhandleT;
+use Spool\Zookeeper\Hashtable\WatcherObjectList;
+use Spool\Zookeeper\Hashtable\WatcherObjectT;
 
 class Hashtable
 {

@@ -6,8 +6,9 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
+use Swoole\Lock;
 /**
  * Description of BufferList
  *
@@ -27,11 +28,7 @@ class BufferListT extends \SplQueue{
     */
     public $curr_offset;    //int	头部的偏移量，后面是内容
     /**
-    * @var BufferListT
-    */
-    public $next;	    //obj BufferList	下一个类的指针
-    /**
-    * @var \SyncMutex
+    * @var \Swoole\Lock
     */
     public $lock;	    //obj SyncMutex	共享锁
     public function lock() {

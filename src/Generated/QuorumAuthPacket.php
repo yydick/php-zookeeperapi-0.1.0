@@ -6,12 +6,12 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Generated;
+namespace Spool\Zookeeper\Generated;
 
 
-use Zkclient\Classes\Oarchive;
-use Zkclient\Classes\Iarchive;
-use Zkclient\Classes\Buffer;
+use Spool\Zookeeper\Classes\Oarchive;
+use Spool\Zookeeper\Classes\Iarchive;
+use Spool\Zookeeper\Classes\Buffer;
 /**
  * Description of QuorumAuthPacket
  *
@@ -27,7 +27,7 @@ class QuorumAuthPacket {
     */
     public $status;	      //int32_t
     /**
-    * @var {\Zkclient\Classes\Buffer|Buffer}
+    * @var {\Spool\Zookeeper\Classes\Buffer|Buffer}
     */
     public $token;	      //obj buffer
     public function serialize(Oarchive &$out, string $tag, QuorumAuthPacket &$v): int {

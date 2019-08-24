@@ -6,13 +6,13 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Generated;
+namespace Spool\Zookeeper\Generated;
 
 
-use Zkclient\Classes\Oarchive;
-use Zkclient\Classes\Iarchive;
-use Zkclient\Classes\Buffer;
-use Zkclient\Generated\IdVector;
+use Spool\Zookeeper\Classes\Oarchive;
+use Spool\Zookeeper\Classes\Iarchive;
+use Spool\Zookeeper\Classes\Buffer;
+use Spool\Zookeeper\Generated\IdVector;
 /**
  * Description of QuorumPacket
  *
@@ -28,7 +28,7 @@ class QuorumPacket {
     */
     public $zxid;	      //int64_t
     /**
-    * @var \Zkclient\Classes\Buffer
+    * @var \Spool\Zookeeper\Classes\Buffer
     */
     public $data;	      //obj buffer
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Zkclient\Hashtable;
+namespace Spool\Zookeeper\Hashtable;
 
 class ResultCheckerFn
 {

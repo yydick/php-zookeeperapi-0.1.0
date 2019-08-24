@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Classes;
+namespace Spool\Zookeeper\Classes;
 
 /**
  * Description of Buff_struct

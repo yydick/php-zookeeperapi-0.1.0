@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Lib;
+namespace Spool\Zookeeper\Lib;
 
 /**
  * Description of ZookeeperException

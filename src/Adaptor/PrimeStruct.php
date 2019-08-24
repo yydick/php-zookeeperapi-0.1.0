@@ -1,6 +1,6 @@
 <?php
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
 class PrimeStruct
 {

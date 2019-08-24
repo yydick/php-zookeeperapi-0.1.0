@@ -6,14 +6,14 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
-use Zkclient\Adaptor\Str;
-use Zkclient\Generated\Stat;
-use Zkclient\Adaptor\Data;
-use Zkclient\Adaptor\Acl;
-use Zkclient\Generated\StringVector;
-use Zkclient\Adaptor\StrsStat;
+use Spool\Zookeeper\Adaptor\Str;
+use Spool\Zookeeper\Generated\Stat;
+use Spool\Zookeeper\Adaptor\Data;
+use Spool\Zookeeper\Adaptor\Acl;
+use Spool\Zookeeper\Generated\StringVector;
+use Spool\Zookeeper\Adaptor\StrsStat;
 
 /**
  * Description of syncCompletion

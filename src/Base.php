@@ -2,6 +2,7 @@
 
 use Spool\Zookeeper\Lib\Log;
 
+define('BIG_ENDIAN', pack('L', 1) === pack('N', 1));
 defined('LOGFILE') || define('LOGFILE', 'php://stderr');
 define('LOGSTREAM', Log::getLogStream());
 //define('EXPIRED_SESSION_STATE_DEF', -112);
@@ -12,7 +13,7 @@ define('LOGSTREAM', Log::getLogStream());
 //define('NOTCONNECTED_STATE_DEF', 999);
 //define('ZOO_EPHEMERAL', 1);
 //define('ZOO_SEQUENCE', 2);
-define('ADAPTOR', TRUE);
+define('Spool\Zookeeper\', TRUE);
 
 define('PTHREADS', false);
 

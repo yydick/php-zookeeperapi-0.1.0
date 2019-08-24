@@ -6,11 +6,11 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Classes;
+namespace Spool\Zookeeper\Classes;
 
-use Zkclient\Classes\Sizeof;
-use Zkclient\Classes\Oarchive;
-use Zkclient\Classes\Iarchive;
+use Spool\Zookeeper\Classes\Sizeof;
+use Spool\Zookeeper\Classes\Oarchive;
+use Spool\Zookeeper\Classes\Iarchive;
 
 /**
  * Description of recordio

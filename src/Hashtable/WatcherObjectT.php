@@ -1,8 +1,8 @@
 <?php
 
-namespace Zkclient\Hashtable;
+namespace Spool\Zookeeper\Hashtable;
 
-use Zkclient\Zoo\WatcherFn;
+use Spool\Zookeeper\Zoo\WatcherFn;
 
 class WatcherObjectT
 {

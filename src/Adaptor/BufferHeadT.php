@@ -6,9 +6,9 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
-use Zkclient\Adaptor\BufferListT;
+use Spool\Zookeeper\Adaptor\BufferListT;
 
 /**
  * Description of bufferHeadT

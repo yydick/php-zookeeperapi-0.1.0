@@ -6,10 +6,10 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
-use Zkclient\Classes\Buffer;
-use Zkclient\Adaptor\VoidCompletionT;
+use Spool\Zookeeper\Classes\Buffer;
+use Spool\Zookeeper\Adaptor\VoidCompletionT;
 
 /**
  * Description of AuthInfo

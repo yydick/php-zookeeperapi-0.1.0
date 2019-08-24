@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
 /**
  * Description of timeVal

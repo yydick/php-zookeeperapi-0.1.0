@@ -6,13 +6,13 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Generated;
+namespace Spool\Zookeeper\Generated;
 
 
-use Zkclient\Classes\Oarchive;
-use Zkclient\Classes\Iarchive;
-use Zkclient\Generated\AclVector;
-use Zkclient\Generated\Stat;
+use Spool\Zookeeper\Classes\Oarchive;
+use Spool\Zookeeper\Classes\Iarchive;
+use Spool\Zookeeper\Generated\AclVector;
+use Spool\Zookeeper\Generated\Stat;
 
 /**
  * Description of GetACLResponse

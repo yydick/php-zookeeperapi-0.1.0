@@ -6,9 +6,9 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Classes;
+namespace Spool\Zookeeper\Classes;
 
-use Zkclient\Lib\ZookeeperException;
+use Spool\Zookeeper\Lib\ZookeeperException;
 /**
  *
  * @author 陈浩波

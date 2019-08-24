@@ -6,16 +6,16 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
-use Zkclient\Adaptor\AuthListHead;
-use Zkclient\System\Timeval;
-use Zkclient\Adaptor\BufferListT;
-use Zkclient\Adaptor\BufferHeadT;
-use Zkclient\Zoo\CompletionHeadT;
-use Zkclient\Zoo\ClientIdT;
-use Zkclient\Adaptor\PrimeStruct;
-use Zkclient\Hashtable\WatcherObjectList;
+use Spool\Zookeeper\Adaptor\AuthListHead;
+use Spool\Zookeeper\System\Timeval;
+use Spool\Zookeeper\Adaptor\BufferListT;
+use Spool\Zookeeper\Adaptor\BufferHeadT;
+use Spool\Zookeeper\Zoo\CompletionHeadT;
+use Spool\Zookeeper\Zoo\ClientIdT;
+use Spool\Zookeeper\Adaptor\PrimeStruct;
+use Spool\Zookeeper\Hashtable\WatcherObjectList;
 //use \Swoole\Coroutine\Client;
 use \Swoole\Client;
 

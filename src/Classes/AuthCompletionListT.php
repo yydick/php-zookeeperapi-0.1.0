@@ -1,10 +1,10 @@
 <?php
 
-namespace Zkclient\Classes;
+namespace Spool\Zookeeper\Classes;
 
-use Zkclient\Adaptor\VoidCompletionT;
-use Zkclient\Adaptor\AuthInfo;
-use Zkclient\Adaptor\AuthListHead;
+use Spool\Zookeeper\Adaptor\VoidCompletionT;
+use Spool\Zookeeper\Adaptor\AuthInfo;
+use Spool\Zookeeper\Adaptor\AuthListHead;
 
 class AuthCompletionListT extends \SplQueue
 {

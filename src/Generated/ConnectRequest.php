@@ -6,11 +6,11 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Generated;
+namespace Spool\Zookeeper\Generated;
 
-use Zkclient\Classes\Oarchive;
-use Zkclient\Classes\Iarchive;
-use Zkclient\Classes\Buffer;
+use Spool\Zookeeper\Classes\Oarchive;
+use Spool\Zookeeper\Classes\Iarchive;
+use Spool\Zookeeper\Classes\Buffer;
 
 /**
  * Description of ConnectRequest
@@ -35,7 +35,7 @@ class ConnectRequest {
     */
     public $sessionId;		    //int64_t
     /**
-    * @var \Zkclient\Classes\Buffer
+    * @var \Spool\Zookeeper\Classes\Buffer
     */
     public $passwd;		    //buffer
     public function serialize(Oarchive &$out, string $tag, ConnectRequest &$v) : int{

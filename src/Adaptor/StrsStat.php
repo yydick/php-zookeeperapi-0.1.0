@@ -6,10 +6,10 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
-use Zkclient\Generated\StringVector;
-use Zkclient\Generated\Stat;
+use Spool\Zookeeper\Generated\StringVector;
+use Spool\Zookeeper\Generated\Stat;
 
 /**
  * Description of StrsStat

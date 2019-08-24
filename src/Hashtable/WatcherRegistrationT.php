@@ -1,9 +1,9 @@
 <?php
 
-namespace Zkclient\Hashtable;
+namespace Spool\Zookeeper\Hashtable;
 
-use Zkclient\Zoo\WatcherFn;
-use Zkclient\Hashtable\ResultCheckerFn;
+use Spool\Zookeeper\Zoo\WatcherFn;
+use Spool\Zookeeper\Hashtable\ResultCheckerFn;
 
 
 class WatcherRegistrationT

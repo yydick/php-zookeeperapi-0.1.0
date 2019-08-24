@@ -6,12 +6,12 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Classes;
+namespace Spool\Zookeeper\Classes;
 
-use Zkclient\Classes\Buff_struct;
-use Zkclient\Classes\Buffer;
-use Zkclient\Classes\Sizeof;
-use Zkclient\Generated\ReplyHeader;
+use Spool\Zookeeper\Classes\Buff_struct;
+use Spool\Zookeeper\Classes\Buffer;
+use Spool\Zookeeper\Classes\Sizeof;
+use Spool\Zookeeper\Generated\ReplyHeader;
 /**
  * Description of iarchive
  *

@@ -6,14 +6,17 @@
  * and open the template in the editor.
  */
 
-namespace Spool\Zookeeper\Adaptor;
+namespace Spool\Zookeeper\Lib;
 
-use Spool\Zookeeper\Generated\StringVector;
+
 
 /**
+ * Description of adaptor
  *
- * @author 陈浩波
+ * @author 大天使长
  */
-interface StringsCompletionT {
-    public function __invoke(int $rc, StringVector &$strings, &$data);
+class adaptor {
+    public function do_io($param) {
+        
+    }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
-use Zkclient\Adaptor\AuthInfo;
+use Spool\Zookeeper\Adaptor\AuthInfo;
 
 class AuthListHead
 {

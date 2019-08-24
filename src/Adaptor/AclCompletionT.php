@@ -6,9 +6,9 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
-use Zkclient\Generated\AclVector;
+use Spool\Zookeeper\Generated\AclVector;
 
 /**
  *

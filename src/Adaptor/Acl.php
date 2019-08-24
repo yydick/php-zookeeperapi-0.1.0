@@ -6,10 +6,10 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
-use Zkclient\Generated\AclVector;
-use Zkclient\Generated\Stat;
+use Spool\Zookeeper\Generated\AclVector;
+use Spool\Zookeeper\Generated\Stat;
 
 /**
  * Description of Acl

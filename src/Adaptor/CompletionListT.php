@@ -6,11 +6,11 @@
  * and open the template in the editor.
  */
 
-namespace Zkclient\Adaptor;
+namespace Spool\Zookeeper\Adaptor;
 
-use Zkclient\Adaptor\BufferListT;
-use Zkclient\Zoo\CompletionT;
-use Zkclient\Hashtable\WatcherRegistrationT;
+use Spool\Zookeeper\Adaptor\BufferListT;
+use Spool\Zookeeper\Zoo\CompletionT;
+use Spool\Zookeeper\Hashtable\WatcherRegistrationT;
 
 /**
  * Description of CompletionListT
@@ -23,7 +23,7 @@ class CompletionListT {
     */
     public $xid;		    //int32_t
     /**
-    * @var {\Zkclient\Zoo\CompletionT|CompletionT}
+    * @var {\Spool\Zookeeper\Zoo\CompletionT|CompletionT}
     */
     public $c;			    //CompletionT
     /**

@@ -7,3 +7,4 @@
  */
 require 'vendor/autoload.php';
 
+$zk = new Spool\Zookeeper\Zookeeper('localhost:2181');

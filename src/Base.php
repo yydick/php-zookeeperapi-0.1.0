@@ -13,9 +13,9 @@ define('LOGSTREAM', Log::getLogStream());
 //define('NOTCONNECTED_STATE_DEF', 999);
 //define('ZOO_EPHEMERAL', 1);
 //define('ZOO_SEQUENCE', 2);
-define('Spool\Zookeeper\', TRUE);
+//define('Spool\Zookeeper\', TRUE);
 
-define('PTHREADS', false);
+define('PTHREADS', FALSE);
 
 define('IPPROTO_TCP', 6);       /* Transmission Control Protocol.  */
 

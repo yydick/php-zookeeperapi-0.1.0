@@ -9,14 +9,11 @@
 namespace Spool\Zookeeper\Lib;
 
 use Spool\Zookeeper\Lib\ZhandleT;
-
 /**
- * Description of adaptor
+ * Description of WatcherFn
  *
  * @author 大天使长
  */
-class adaptor {
-    public function do_io(ZhandleT $zh) {
-        
-    }
+interface WatcherFn {
+    public function __invoke(ZhandleT &$zh, int $type, int $state, string $path, $watcherCtx);
 }

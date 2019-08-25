@@ -8,15 +8,18 @@
 
 namespace Spool\Zookeeper\Lib;
 
-use Spool\Zookeeper\Lib\ZhandleT;
-
 /**
- * Description of adaptor
+ * Description of ClientidT
  *
  * @author 大天使长
  */
-class adaptor {
-    public function do_io(ZhandleT $zh) {
-        
-    }
+class ClientIdT {
+    /**
+     * @var int64
+     */
+    public $clientId;
+    /**
+     * @var char[16] 
+     */
+    public $passwd;
 }

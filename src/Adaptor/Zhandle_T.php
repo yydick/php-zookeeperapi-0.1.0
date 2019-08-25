@@ -6,17 +6,27 @@
  * and open the template in the editor.
  */
 
-namespace Spool\Zookeeper\Lib;
+namespace Spool\Zookeeper\Adaptor;
+
+use Spool\Zookeeper\Adaptor\AuthListHead;
+use Spool\Zookeeper\System\Timeval;
+use Spool\Zookeeper\Adaptor\BufferListT;
+use Spool\Zookeeper\Adaptor\BufferHeadT;
+use Spool\Zookeeper\Zoo\CompletionHeadT;
+use Spool\Zookeeper\Zoo\ClientIdT;
+use Spool\Zookeeper\Adaptor\PrimeStruct;
+use Spool\Zookeeper\Hashtable\WatcherObjectList;
+//use \Swoole\Coroutine\Client;
+use \Swoole\Client;
 
 /**
  * Description of Zhandle
  *
- * @author 大天使长
+ * @author 陈浩波
  */
-class Zhandle {
-    
+class Zhandle_T {
     /**
-     * @var \Swoole\Client
+     * @var int
      */
     public $fd;			    /* the descriptor used to talk to zookeeper */
     /**
@@ -144,43 +154,4 @@ class Zhandle {
      * @var string
      */
     public $chroot;		    //string
-}
-
-class timeVal {
-    /**
-    * @var int
-    */
-    public $tv_sec; /* int Seconds. */
-    /**
-    * @var int
-    */
-    public $tv_usec; /* int Microseconds. */
-
-    public function __construct() {
-	$this->getNow();
-    }
-
-    public function getNow() {
-	$timezone = date_default_timezone_get();
-	$time = \microtime();
-	$tv = \explode(' ', $time);
-	$this->tv_sec = $tv[1];
-	$this->tv_usec = $tv[0] * 1000000;
-	date_default_timezone_set($timezone);
-    }
-}
-
-class Utsname{
-    public $sysname;
-    public $nodename;
-    public $release;
-    public $version;
-    public $machine;
-    public static function uname(){
-        $this->sysname = php_uname('s');
-        $this->nodename = php_uname('n');
-        $this->release = php_uname('r');
-        $this->version = php_uname('v');
-        $this->machine = php_uname('m');
-    }
 }

@@ -9,7 +9,7 @@
 namespace Spool\Zookeeper\Adaptor;
 
 use Spool\Zookeeper\Adaptor\BufferListT;
-use Spool\Zookeeper\Zoo\CompletionT;
+use Spool\Zookeeper\Lib\CompletionT;
 use Spool\Zookeeper\Hashtable\WatcherRegistrationT;
 
 /**
@@ -23,7 +23,7 @@ class CompletionListT {
     */
     public $xid;		    //int32_t
     /**
-    * @var {\Spool\Zookeeper\Zoo\CompletionT|CompletionT}
+    * @var CompletionT
     */
     public $c;			    //CompletionT
     /**
@@ -31,7 +31,7 @@ class CompletionListT {
     */
     public $data;		    //void
     /**
-    * @var {BufferListT|BufferListT}
+    * @var BufferListT
     */
     public $buffer;		    //obj BufferListT
     /**
@@ -42,4 +42,10 @@ class CompletionListT {
     * @var WatcherRegistrationT
     */
     public $watcher;		//obj WatcherRegistrationT
+    public function __construct(int $xid = 0, CompletionT $c = null, $data = null, BufferListT $buffer = null, WatcherRegistrationT $watcher = null) {
+        $this->xid = $xid;
+        $this->c = $c;
+        $this->buffer = $buffer;
+        $this->watcher = $watcher;
+    }
 }

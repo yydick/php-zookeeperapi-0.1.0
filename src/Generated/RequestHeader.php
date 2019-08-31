@@ -33,7 +33,9 @@ class RequestHeader {
     public function serialize(Oarchive &$out, string $tag, RequestHeader &$v): int {
 	$rc = $out->startRecord($tag);
 	$rc = $rc ?: $out->serializeInt('xid', $v->xid);
+        var_dump($out->get_buffer());
 	$rc = $rc ?: $out->serializeInt('type', $v->type);
+        var_dump($out->get_buffer());
 	$rc = $rc ?: $out->endRecord($tag);
 	return $rc;
     }

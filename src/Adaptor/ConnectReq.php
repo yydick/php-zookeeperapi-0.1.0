@@ -38,4 +38,26 @@ class ConnectReq {
     * @var string
     */
     public $passwd;		//char[16]
+    public function __toString() : string
+    {
+        return $this->toString();
+    }
+    public function getLen() : int
+    {
+        $result = strlen($this);
+        return $result;
+    }
+    public function __sleep() : string
+    {
+        return $this->toString();
+    }
+    protected function toString() : string
+    {
+        $result = pack("NJNJN", $this->protocolVersion, $this->lastZxidSeen, $this->timeOut, $this->sessionId, $this->passwd_len);
+        for($i = 0; $i < 16; $i++){
+            $result .= isset($this->passwd[$i]) ? ord($this->passwd[$i]) : chr(0);
+        }
+//        var_dump($result);
+        return (string)$result;
+    }
 }

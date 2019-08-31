@@ -81,7 +81,7 @@ class Log
         $now_str .= $mtime[1];
         return $now_str;
     }
-    public static function log_message(int $curLevel, int $line, string &$fileName, string &$message)
+    public static function log_message(int $curLevel, int $line, string $fileName, string $message)
     {
         $dbgLevelStr=["ZOO_INVALID","ZOO_ERROR","ZOO_WARN","ZOO_INFO","ZOO_DEBUG"];
         $pid = getmypid();

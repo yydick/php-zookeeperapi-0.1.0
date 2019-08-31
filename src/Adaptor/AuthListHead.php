@@ -3,6 +3,7 @@
 namespace Spool\Zookeeper\Adaptor;
 
 use Spool\Zookeeper\Adaptor\AuthInfo;
+use Swoole\Lock;
 
 class AuthListHead
 {
@@ -11,7 +12,7 @@ class AuthListHead
     */
     public $auth;
     /**
-    * @var \SyncMutex
+    * @var Lock
     */
     public $lock;
 }

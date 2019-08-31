@@ -31,6 +31,11 @@ class BufferListT extends \SplQueue{
     * @var \Swoole\Lock
     */
     public $lock;	    //obj SyncMutex	共享锁
+    public function __construct(string $buffer = '', int $len = 0, int $curr_offset = 0) {
+        $this->buffer = $buffer;
+        $this->len = $len;
+        $this->curr_offset = $curr_offset;
+    }
     public function lock() {
 	return $this->lock->lock();
     }

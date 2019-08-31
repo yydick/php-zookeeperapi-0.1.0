@@ -18,7 +18,8 @@ use Spool\Zookeeper\Lib\NullWatcherFn;
 use Spool\Zookeeper\Adaptor\AuthListHead;
 use Spool\Zookeeper\Adaptor\BufferListT;
 use Spool\Zookeeper\Adaptor\BufferHeadT;
-use Spool\Zookeeper\Lib\timeVal;
+use Spool\Zookeeper\Lib\TimeVal;
+use Spool\Zookeeper\Lib\Adaptor;
 //use Spool\Zookeeper\Zoo\CompletionHeadT;
 use Spool\Zookeeper\Adaptor\PrimeStruct;
 use Spool\Zookeeper\Hashtable\WatcherObjectList;
@@ -35,6 +36,7 @@ class Zookeeper {
      * @var Spool\Zookeeper\Lib\ZhandleT 
      */
     protected $zh;
+    protected $adaptor;
     /**
      * 类初始化
      * @param string $host
@@ -45,6 +47,7 @@ class Zookeeper {
     public function __construct(string $host, WatcherFn $watcher = null, int $recvTimeout = 30000, ClientIdT $clientId = null)
     {
         $this->zh = new ZhandleT();
+        $this->adaptor = new Adaptor();
         $rc = $this->init($host, $watcher, $recvTimeout, $clientId);
     }
     /**
@@ -56,7 +59,7 @@ class Zookeeper {
      * @param type $context 保留
      * @param int $flags = 0 保留
      */
-    public function init(string $host, WatcherFn $watcher = null, int $recv_timeout = 30000, ClientIdT $clientid = null, $context = null, int $flags = 0) : int
+    protected function init(string $host, WatcherFn $watcher = null, int $recv_timeout = 30000, ClientIdT $clientid = null, $context = null, int $flags = 0) : int
     {
         $errnosave = 0;
         $index_chroot = '';
@@ -65,10 +68,12 @@ class Zookeeper {
         $client_passwd = $clientid && !$clientid->passwd ? "<hidden>" : "<null>";
         Log::LOG_INFO("Initiating client connection, host=$host sessionTimeout=$recv_timeout watcher=$watcher sessionId=$client_id sessionPasswd=$client_passwd context=$context flags=$flags", __LINE__, __FUNCTION__);
         $zh = &$this->zh;
-        $zh->fd = new Client(SWOOLE_SOCK_TCP);
+        //Use Swoole async model
+        $zh->fd = new Client(SWOOLE_SOCK_TCP, SWOOLE_SOCK_ASYNC);
         $zh->state = NOTCONNECTED_STATE_DEF;
         $zh->context = $context;
-        $zh->recv_timeout = $recv_timeout;
+        $zh->recv_timeout = new TimeVal();
+        $zh->recv_timeout->get_timeval($recv_timeout);
 //        $this->initAuthInfo($zh->auth_h);
         if(is_callable($watcher)){
             $zh->watcher = $watcher;
@@ -102,7 +107,7 @@ class Zookeeper {
         if ($clientid) {
             $zh->client_id = $clientid;
         } else {
-            $zh->client_id = null;
+            $zh->client_id = new ClientIdT();
         }
         $zh->primer_buffer = new BufferListT();
         $zh->primer_buffer->buffer = $zh->primer_storage_buffer;
@@ -110,19 +115,22 @@ class Zookeeper {
         $zh->primer_buffer->len = strlen($zh->primer_storage_buffer);
         $zh->primer_buffer->next = 0;
         $zh->last_zxid = 0;
-        $zh->next_deadline = new timeVal();
+        $zh->next_deadline = new TimeVal();
         $zh->next_deadline->tv_sec = $zh->next_deadline->tv_usec = 0;
-        $zh->socket_readable = new timeVal();
+        $zh->socket_readable = new TimeVal();
         $zh->socket_readable->tv_sec = $zh->socket_readable->tv_usec = 0;
         $zh->active_node_watchers = [];
         $zh->active_exist_watchers = [];
         $zh->active_child_watchers = [];
-        if ($this->adaptor_init($zh) == -1) {
+        if ($this->adaptor->init($zh) == -1) {
             throw new ZookeeperException('start init is error');
         }
-        return $this->zh;
+        return ZOK;
     }
-    
+    public function close(ZhandleT &$zh) : int
+    {
+        return $zh->close();
+    }
     protected function logEnv()
     {
 //        $buf = '';

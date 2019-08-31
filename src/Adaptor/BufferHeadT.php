@@ -9,6 +9,7 @@
 namespace Spool\Zookeeper\Adaptor;
 
 use Spool\Zookeeper\Adaptor\BufferListT;
+use Swoole\Lock;
 
 /**
  * Description of bufferHeadT
@@ -27,11 +28,19 @@ class BufferHeadT {
      */
     public $last;
     /**
-     * @var \SyncSemaphore 列表尾
+     * \SyncSemaphore 列表尾
+     * @var Lock 
      */
     public $cond;
     /**
-     * @var \SyncMutex 列表尾
+     * \SyncMutex 列表尾
+     * @var Lock 
      */
     public $lock;
+    public function __construct() {
+        $this->head = new BufferListT();
+        $this->last = new BufferListT();
+        $this->lock = new Lock(SWOOLE_MUTEX);
+        $this->cond = new Lock(SWOOLE_SEM);
+    }
 }

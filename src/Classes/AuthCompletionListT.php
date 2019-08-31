@@ -18,7 +18,7 @@ class AuthCompletionListT extends \SplQueue
     public $auth_data;	    //string
 //    public $next;
     
-    public function get_auth_completions(AuthListHead &$auth_list) : AuthInfo
+    public function get_auth_completions(AuthListHead &$auth_list)
     {
         if(!$auth_list->auth){
             $auth_list->auth->auth = &$this;

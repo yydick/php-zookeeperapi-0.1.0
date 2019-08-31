@@ -1,10 +1,11 @@
 <?php
 
 use Spool\Zookeeper\Lib\Log;
-
+Swoole\Runtime::enableCoroutine(true);
 define('BIG_ENDIAN', pack('L', 1) === pack('N', 1));
 defined('LOGFILE') || define('LOGFILE', 'php://stderr');
 define('LOGSTREAM', Log::getLogStream());
+define('ZOOKEEPER_DEBUG', TRUE);
 //define('EXPIRED_SESSION_STATE_DEF', -112);
 //define('AUTH_FAILED_STATE_DEF', -113);
 //define('CONNECTING_STATE_DEF', 1);
@@ -15,6 +16,7 @@ define('LOGSTREAM', Log::getLogStream());
 //define('ZOO_SEQUENCE', 2);
 //define('Spool\Zookeeper\', TRUE);
 
+define("HANDSHAKE_REQ_SIZE", 44);
 define('PTHREADS', FALSE);
 
 define('IPPROTO_TCP', 6);       /* Transmission Control Protocol.  */
